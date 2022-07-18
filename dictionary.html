@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập từ
+<input type="text" id="word">
+<button onclick="Trans()">Dịch từ</button>
+<p id="result"></p>
+<script>
+    let tiengAnh=["apple","banana","orange","name","age"];
+    let tiengViet=["táo","chuối","cam","tên","tuổi"];
+    function Trans(){
+        let word=document.getElementById("word").value;
+        if(tiengAnh.indexOf(word)!==-1){
+            document.getElementById("result").innerText=tiengViet[tiengAnh.indexOf(word)]
+        } else {
+            document.getElementById("result").innerText="Not found!"
+        }
+    }
+
+</script>
+</body>
+</html>
